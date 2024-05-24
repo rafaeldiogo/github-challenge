@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, KeyboardEvent } from "react";
 import { FaSearch } from "react-icons/fa";
-import { KeyboardEvent } from "react";
 
 type SearchProps = {
   fetchUser: (userName: string) => Promise<void>;
