@@ -1,8 +1,8 @@
 import { useState, KeyboardEvent } from "react";
-import { FaSearch } from "react-icons/fa";
+import { FaSearch, FaTimes } from "react-icons/fa";
 
 type SearchProps = {
-  fetchUser: (userName: string) => Promise<void>;
+  fetchUser: (userName: string) => void;
 };
 
 export const SearchBar = ({ fetchUser }: SearchProps) => {
@@ -12,6 +12,11 @@ export const SearchBar = ({ fetchUser }: SearchProps) => {
     if (e.key === "Enter") {
       fetchUser(userName);
     }
+  };
+
+  const handleClear = () => {
+    setUserName("");
+    fetchUser("");
   };
 
   return (
@@ -27,7 +32,13 @@ export const SearchBar = ({ fetchUser }: SearchProps) => {
         id="username"
         onChange={(e) => setUserName(e.target.value)}
         onKeyDown={handleKeyDown}
+        value={userName}
       />
+      {userName && (
+        <button aria-label="clear" onClick={handleClear}>
+          <FaTimes className="fill-blue-500" />
+        </button>
+      )}
     </div>
   );
 };
