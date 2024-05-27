@@ -1,0 +1,26 @@
+{
+    "repositories": [
+      {
+        "name": "example-repo-1",
+        "created_at": "2023-05-01T12:00:00Z",
+        "description": "This is an example repository.",
+        "html_url": "https://github.com/example/example-repo-1",
+        "stargazers_count": 100
+      },
+      {
+        "name": "example-repo-2",
+        "created_at": "2023-05-02T12:00:00Z",
+        "description": "Another example repository.",
+        "html_url": "https://github.com/example/example-repo-2",
+        "stargazers_count": 50
+      },
+      {
+        "name": "example-repo-3",
+        "created_at": "2023-05-03T12:00:00Z",
+        "description": "Yet another example repository.",
+        "html_url": "https://github.com/example/example-repo-3",
+        "stargazers_count": 200
+      }
+    ]
+  }
+  
