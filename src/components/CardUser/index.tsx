@@ -9,7 +9,7 @@ const CardUser = ({
   name,
 }: UserProps) => {
   return (
-    <div className="w-[100%] shadow-xl bg-white rounded-xl border-2 border-[#eee] flex flex-col items-center justify-between py-7 px-6 gap-4">
+    <div data-testid="carduser" className="w-[100%] shadow-xl bg-white rounded-xl border-2 border-[#eee] flex flex-col items-center justify-between py-7 px-6 gap-4">
       <div className="w-[100%] flex items-center gap-4">
         <img className="size-20 rounded-full" src={avatar_url} alt={login} />
         <div className="flex flex-col">
@@ -27,7 +27,7 @@ const CardUser = ({
           <p>Seguindo:</p>
         </div>
       </div>
-      <Link to={`/repos/${login}`}  type="button" className="flex items-center justify-center h-10 w-fit rounded-xl px-6 font-semibold text-base bg-blue-700 text-white">Acessar</Link>
+      <Link data-testid="seerepositories" to={`/repos/${login}`}  type="button" className="flex items-center justify-center h-10 w-fit rounded-xl px-6 font-semibold text-base bg-blue-700 text-white">Acessar</Link>
     </div>
   );
 };

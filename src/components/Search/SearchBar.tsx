@@ -21,7 +21,7 @@ export const SearchBar = ({ fetchUser }: SearchProps) => {
 
   return (
     <div className="flex items-center bg-white w-[100%] rounded-xl h-10 px-4 shadow-md">
-      <button aria-label="search" onClick={() => fetchUser(userName)}>
+      <button data-testid="search-button" aria-label="search" onClick={() => fetchUser(userName)}>
         <FaSearch className="fill-blue-500" />
       </button>
       <input
@@ -33,6 +33,7 @@ export const SearchBar = ({ fetchUser }: SearchProps) => {
         onChange={(e) => setUserName(e.target.value)}
         onKeyDown={handleKeyDown}
         value={userName}
+        data-testid="search-input"
       />
       {userName && (
         <button aria-label="clear" onClick={handleClear}>
